@@ -8,8 +8,6 @@ const string TETRIMONO[TETRIMONO_MAX] = {"S", "Z", "J", "L", "I", "O", "T"};
 
 void Generate_Grab_Bag(vector<string> *GrabBag)
 {
-	srand(time(NULL));
-
 	vector<int> TetrimonoChecker; // holds ints corresponding to tetrimonos we have already grabbed, so we don't grab a piece twice.
 
 	while (TetrimonoChecker.size() < 7) // while the number of tetrimonos we have generated is less than 7
@@ -36,6 +34,8 @@ void Generate_Grab_Bag(vector<string> *GrabBag)
 
 int main()
 {
+	srand(time(NULL));
+
 	vector<string> GrabBag; // a vector holding a random order of tetrimonos
 
 	// generate 50 blocks
